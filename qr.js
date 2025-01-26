@@ -93,7 +93,7 @@ SESSION-ID ==> ${sessionId}
 
           // Send session ID to user
           const user = Smd.user.id;
-          const msg = await Smd.sendMessage(user, { text: `${sessionId}` });
+          const msg = await Smd.sendMessage(user, { text: `ᴩᴀꜱɪʏᴀ-ᴍᴅ=${sessionId}` });
           await Smd.sendMessage(user, {
               document: fs.readFileSync('./auth_info_baileys/creds.json'),
               fileName: 'creds.json',
