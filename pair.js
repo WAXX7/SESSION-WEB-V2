@@ -75,13 +75,13 @@ router.get('/', async (req, res) => {
 
                         const Scan_Id = Id_session;
 
-                        let msgsss = await Smd.sendMessage(user, { text: `BHASHI-MD~${Scan_Id}` });
+                        let msgsss = await Smd.sendMessage(user, { text: `${Scan_Id}` });
                         
                         await Smd.sendMessage(user, {
                             document: fs.readFileSync('./auth_info_baileys/creds.json'),
                             fileName: 'creds.json',
                             mimetype: 'application/json',
-                            caption: '*Upload This File to BHASHI-MD-SESSION folder*'
+                            caption: '*Upload This File to PASIYA-MD-SESSION folder*'
                         });
                         await Smd.sendMessage(user, { text: MESSAGE }, { quoted: msgsss });
                         await delay(1000);
